@@ -8,18 +8,32 @@
   </head>
   <body>
     <div id="app"></div>
+    
+<input type="button" class="car" value="Скрытая кнопка"  onclick="(type='hidden')">
+<div class="squares"></div>
+
+
+<div class="fieldCoords"></div>
+ 
 
 
 
-    <!-- <div ><img class="ball" width="60" src="/media/ball.png" alt=""></div>
-    <img src="/media/Football_field.jpg" alt="">
- -->
+
 
 
  <div class="field" >
-  <img width="500px" src="/media/Football_field.jpg" alt="">
+  <img width="500px" src="/media/Football_field.jpg" alt=""> 
   <img class="ball" src="/media/ball.png">
-</div>
+</div>  
+
+
+ 
+
+
+<div class="coordinate"></div>
+
+
+
 
 <div class="buttons">
   <button data-num="1" class="btn">1</button>
@@ -29,10 +43,26 @@
 </div>
 
 
+ <!--! обработчик событий -->
+<script>
+  function rabbit () {
+    for (let i=1;i<3;i++) {
+      alert ('кролик ' + i)
+    }
+  }
+</script>
+<input type="button" onclick="rabbit()" value="подсчет кроликов">
 
 
 
 
+<input id="elem" type="button" value="Нажми меня!">
+<script>
+  elem.onclick = function() {
+    alert('Спасибо');
+     
+  };
+</script>
 
     <script type="module" src="/src/main.ts"></script>
   </body>

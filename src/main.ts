@@ -61,23 +61,20 @@ window.addEventListener('mousemove', function (e) {
 
 let balls = document.querySelector('.ball') as HTMLImageElement
 let fields = document.querySelector('.field') as HTMLDivElement
+let rect = fields.getBoundingClientRect()
 
 fields.addEventListener('click', function (e) {
-   balls.style.left = e.pageX - this.clientLeft - this.offsetLeft - 30 + 'px'
-   balls.style.top = e.pageY - this.scrollTop - this.clientTop - this.offsetTop - 30 + 'px'
-
-   let rect = fields.getBoundingClientRect()
-  
-   // if (balls.left < 0) balls.left = 0;
-
-  
-   function getCoords() {
-      let rect = fields.getBoundingClientRect();
-
-      return {
-         
-      };
+   let x = e.clientX - this.clientLeft - this.offsetLeft-30
+   let y = e.clientY - this.clientTop - this.offsetTop-30
+   if (x < 0) {
+      x = 0
    }
+   if (y < 0) {
+      y = 0
+   }
+  
+   balls.style.left = x + 'px'
+   balls.style.top = y + 'px'
 })
 
 

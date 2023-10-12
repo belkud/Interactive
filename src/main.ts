@@ -5,7 +5,23 @@ import './style.css'
 
 
 
-let square = document.querySelectorAll('.squares')[0]
+
+
+
+
+
+
+let name = {
+   age:32,
+   color:'white',
+   city: '111'
+}
+
+console.log(name);
+
+
+
+let square = document.querySelector('.squares') as HTMLDivElement
 square.style.color = 'red'
 square.style.padding = 20+'px'
 square.style.border = '2px solid red'
@@ -14,6 +30,7 @@ square.style.margin = 50 +'px'
 square.style.background = '#808080'
 square.style.fontSize= '1.2em'
 square.innerHTML += 'свойства через js'
+
 console.log(square.style.cssText);
 
 square.addEventListener ('click', function(){
@@ -71,12 +88,10 @@ fields.addEventListener('click', function (e) {
 let fieldCoord = document.querySelectorAll('.fieldCoords')[0]
 let rect2 = fieldCoord.getBoundingClientRect()
 fieldCoord.innerHTML +=`Координаты окна:<br>`
-fieldCoord.innerHTML += `верхняя левая точка ${rect2.left}px/${Math.round(rect2.top)}px <br>`
-fieldCoord.innerHTML += `верхняя правая точка ${rect2.right}px/${Math.round(rect2.top)}px<br>`
-fieldCoord.innerHTML += `нижняя правая точка ${rect2.right}px/${Math.round(rect2.bottom)}px <br>`
-fieldCoord.innerHTML +=`нижняя левая точка${rect2.left}px/${Math.round(rect2.right)}px`
-
-
+fieldCoord.innerHTML += `верхняя левая точка ${Math.round(rect2.left)}px/${Math.round(rect2.top)}px <br>`
+fieldCoord.innerHTML += `верхняя правая точка ${Math.round(rect2.right)}px/${Math.round(rect2.top)}px<br>`
+fieldCoord.innerHTML += `нижняя правая точка ${Math.round(rect2.right)}px/${Math.round(rect2.bottom)}px <br>`
+fieldCoord.innerHTML +=`нижняя левая точка ${Math.round(rect2.left)}px/${Math.round(rect2.bottom)}px`
 
 
 

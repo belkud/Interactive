@@ -2,9 +2,142 @@ import './style.css'
 
 
 
+const changeBackground = document.querySelector('#btn2') as HTMLButtonElement
+ changeBackground.addEventListener ('click', function(){
+   setTimeout(() => {
+     changeBackground.style.backgroundColor = 'blue'
+      changeBackground.style.color = 'white'
+      setInterval(()=>{
+            console.log('Hi');   
+      },1000);
+   }, 3000);
+ })
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function setInt() {
+   setInterval (() => {
+      console.log('один шаг в секунду');
+   }, 1000);
+   setTimeout(() => {
+   setIntervals.style.display = 'none'      
+   }, 500);
+}
+
+function setTime() {
+   setTimeout(() => {
+setIntervals.style.display = 'none'      
+   }, 1500);
+}
+
+const setTimeouts = document.querySelector('#setTimeout') as HTMLButtonElement
+setTimeouts.addEventListener ('click', setTime)
+
+const setIntervals = document.querySelector('#setInterval') as HTMLButtonElement
+ setIntervals.addEventListener ('click', setInt)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const btn5 = document.querySelector('#btn3') as HTMLButtonElement
+const btn6 = document.querySelector('#btn4') as HTMLButtonElement
+
+function click1() {
+console.log('клик 1');
+}
+function click2() {
+   console.log('клик 2');
+    
+}
+
+function click3() {
+   setTimeout(() => {
+      btn6.innerHTML = 'смена надписи'
+      btn6.style.color = 'red'
+      
+   }, 3000);
+   setTimeout(() => {
+      console.log('проверка');
+   }, 2999);
+
+   console.log('клик 3');
+   }
+
+
+
+
+
+
+function click4() {
+   console.log('клик 4');
+   
+}
+
+btn5.onclick=()=> {
+   click2()
+   click4()
+    
+   btn5.onclick = null;
+   
+}
+
+btn6.addEventListener ('click', click3, {
+   once:true
+   
+})
+
+
+
+
+
+let lis = document.querySelectorAll ('li')
+lis.forEach(li=>
+   li.addEventListener ('click', function(){
+   li.style.cursor = 'pointer'
+   li.style.backgroundColor ='orange'
+  
+
+
+   
+      // console.log('123');
+}))
+
+ 
+
+buttons.onmouseup = function(event) {
+   if (event.ctrlKey && event.shiftKey) {
+     console.log('Всем привет!');
+     ;
+   }
+ };
+
+ 
 let coords = document.querySelector('#coord') as HTMLDivElement
 document.addEventListener ('mousemove', function(e){
    coords.innerHTML =`page ${e.pageX}px ${e.pageY}px<br>`
@@ -16,12 +149,6 @@ document.addEventListener ('mousemove', function(e){
  
 
 
-button.onmouseup = function(event) {
-   if (event.ctrlKey && event.shiftKey) {
-     console.log('Всем привет!');
-     ;
-   }
- };
 
 
 
@@ -125,7 +252,12 @@ fieldCoord.innerHTML += `верхняя правая точка ${Math.round(rec
 fieldCoord.innerHTML += `нижняя правая точка ${Math.round(rect2.right)}px/${Math.round(rect2.bottom)}px <br>`
 fieldCoord.innerHTML +=`нижняя левая точка ${Math.round(rect2.left)}px/${Math.round(rect2.bottom)}px`
 
-
+document.addEventListener('click', function(){
+  setTimeout(() => {
+   fieldCoord.style.color = 'red'
+   
+  }, 1000); 
+})
  
 
 

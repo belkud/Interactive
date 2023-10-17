@@ -2,19 +2,84 @@ import './style.css'
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const num = document.querySelector('#num') as HTMLButtonElement
+
+const score = document.querySelector('#score')as HTMLButtonElement
+score.addEventListener ('click', function(num:any){
+   let seconds = setInterval(() => {
+      num++
+      num.innerHTML = '${num}'
+      console.log(num);
+   }, 1000);
+   
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const changeBackground = document.querySelector('#btn2') as HTMLButtonElement
  changeBackground.addEventListener ('click', function(){
    setTimeout(() => {
      changeBackground.style.backgroundColor = 'blue'
       changeBackground.style.color = 'white'
-      setInterval(()=>{
-            console.log('Hi');   
-      },1000);
+   })
    }, 3000);
- })
-
-
-
+   
+   
+   
+//    setInterval(()=>{
+//          console.log('Hi');   
+//    },100);
 
 
 

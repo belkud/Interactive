@@ -1,19 +1,115 @@
-import './style.css'
+import './style.css';
+
+
+
+const months = ['января', 'февраля', 'марта', 'апреля']
+console.log(months[1]);
+
+
+
+
+// let showText = document.querySelector('#showText') as HTMLDivElement
+// showText.addEventListener ('click', function(){
+//    console.log(showText.length);
+
+// })
+
+
+let showText = ('Lorem, delectus ex nisi dolorum molestias porro explicabo.')
+console.log(showText.length);
+
+
+
+
+function fmFunc() {
+   console.log('123');
+   setTimeout(() => {
+      fmConst.style.backgroundColor = 'red'
+   }, 1000);
+
+   setTimeout(() => {
+      // fmConst.style.backgroundColor = 'red',
+      fmConst.style.color = 'white'
+      fmConst.style.backgroundColor = 'blue'
+
+   }, 2000);
+
+   setTimeout(() => {
+      fmConst.style.backgroundColor = 'lightgray'
+      fmConst.style.color = 'blue'
+
+   }, 3000);
+}
+
+const fmConst = document.querySelector("#fm") as HTMLButtonElement
+fmConst.addEventListener('click', fmFunc)
+
+
+
+
+//! Функция существует ТОЛЬКО внутри const!
+
+const fmConst2 = function () {
+   console.log('вывод анонимной функции');
+}
+fmConst2()
+
+
+const fmConst3 = function fmFunc() {
+   console.log('вывод fmFunc функции');
+}
+fmConst3()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function fn2() {
+   // let length  = 0
+   setInterval(() => {
+      length++
+      // JS.innerHTML = `${JS.length}`
+      // console.log(num);
+   }, 1000);
+}
+const JS = document.querySelector('.text') as HTMLDivElement
+JS.addEventListener('click', fn2)
+
+
+
 
 
 const nums = document.querySelector('#num') as HTMLButtonElement
 
 function fn() {
    let num = 0
-   let seconds = setInterval(() => {
+   setInterval(() => {
       num++
       nums.innerHTML = `${num}`
-      // console.log(num);
+
    }, 1000);
+
 }
 
 const score = document.querySelector('#score') as HTMLButtonElement
-score.addEventListener('click', fn)
+score.addEventListener('click', fn, { once: true })
+// score.style.backgroundColor = 'green'
+
+
+
+
+
 
 
 
@@ -48,16 +144,17 @@ changeBackground.addEventListener('click', function () {
 
 function setInt() {
    setInterval(() => {
-      console.log('один шаг в секунду');
    }, 1000);
    setTimeout(() => {
       setIntervals.style.display = 'none'
-   }, 500);
+      console.log('setInterval');
+   }, 2500);
 }
 
 function setTime() {
    setTimeout(() => {
-      setIntervals.style.display = 'none'
+      setTimeouts.style.display = 'none'
+
    }, 1500);
 }
 
@@ -83,9 +180,9 @@ setIntervals.addEventListener('click', setInt)
 const btn5 = document.querySelector('#btn3') as HTMLButtonElement
 const btn6 = document.querySelector('#btn4') as HTMLButtonElement
 
-function click1() {
-   console.log('клик 1');
-}
+// function click1() {
+//    console.log('клик 1');
+// }
 function click2() {
    console.log('клик 2');
 

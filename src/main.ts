@@ -8,40 +8,42 @@ console.log(months[1]);
 
 
 
-// let showText = document.querySelector('#showText') as HTMLDivElement
-// showText.addEventListener ('click', function(){
-//    console.log(showText.length);
-
-// })
-
-
-let showText = ('Lorem, delectus ex nisi dolorum molestias porro explicabo.')
-console.log(showText.length);
-
-
-
+ 
 
 function fmFunc() {
-   console.log('123');
+   
+   
    setTimeout(() => {
       fmConst.style.backgroundColor = 'red'
+      fmConst.style.boxShadow = '10px 10px 3px red'
+
    }, 1000);
 
    setTimeout(() => {
       // fmConst.style.backgroundColor = 'red',
       fmConst.style.color = 'white'
       fmConst.style.backgroundColor = 'blue'
+      fmConst.style.boxShadow = '10px 10px 3px blue'
 
    }, 2000);
 
    setTimeout(() => {
-      fmConst.style.backgroundColor = 'lightgray'
-      fmConst.style.color = 'blue'
+      fmConst.style.backgroundColor = 'gray'
+      // fmConst.style.color = 'blue'
+      fmConst.style.boxShadow = '10px 10px 5px gray'
 
    }, 3000);
 }
 
 const fmConst = document.querySelector("#fm") as HTMLButtonElement
+   fmConst.style.backgroundColor = 'green'
+   fmConst.style.color = 'white'
+   fmConst.style.border = '2px solid black'
+   fmConst.style.padding = '5px'
+   fmConst.style.marginRight = '25px'
+   fmConst.style.borderRadius = '5px'
+   fmConst.style.boxShadow = '10px 10px 3px green'
+   
 fmConst.addEventListener('click', fmFunc)
 
 
@@ -63,15 +65,7 @@ fmConst3()
 
 
 
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -121,24 +115,7 @@ changeBackground.addEventListener('click', function () {
    }, 3000);
 })
 
-
-
-//    setInterval(()=>{
-//          console.log('Hi');   
-//    },100);
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -165,20 +142,38 @@ const setIntervals = document.querySelector('#setInterval') as HTMLButtonElement
 setIntervals.addEventListener('click', setInt)
 
 
-
-
-
-
-
-
-
-
-
-
+ 
 
 
 const btn5 = document.querySelector('#btn3') as HTMLButtonElement
-const btn6 = document.querySelector('#btn4') as HTMLButtonElement
+
+
+
+
+function changeBackground2() {
+if (btn6.style.backgroundColor == 'blueviolet') {
+   btn6.style.backgroundColor = 'orange'
+   btn6.innerHTML = 'Выключить'
+   btn6.style.boxShadow = '0px 0px 30px orange'
+   
+} else {
+   btn6.style.backgroundColor = 'blueviolet'
+   btn6.style.boxShadow = '0px 0px 30px blueviolet'
+   btn6.innerHTML = 'Включить'
+}
+}
+
+// btn6.onclick=()=> btn6.toggleAttribute("lit");
+// #btn6.lit {
+   // background:yellow;
+// }
+
+
+
+
+
+const btn6 = document.querySelector('#btn4') as HTMLDivElement
+btn6.addEventListener ('click', changeBackground2)
 
 // function click1() {
 //    console.log('клик 1');
@@ -189,16 +184,7 @@ function click2() {
 }
 
 function click3() {
-   setTimeout(() => {
-      btn6.innerHTML = 'смена надписи'
-      btn6.style.color = 'red'
-
-   }, 3000);
-   setTimeout(() => {
-      console.log('проверка');
-   }, 2999);
-
-   console.log('клик 3');
+    
 }
 
 
@@ -219,10 +205,10 @@ btn5.onclick = () => {
 
 }
 
-btn6.addEventListener('click', click3, {
-   once: true
+// btn6.addEventListener('click', click3, {
+//    once: true
 
-})
+// })
 
 
 
@@ -258,14 +244,7 @@ document.addEventListener('mousemove', function (e) {
 })
 
 
-
-
-
-
-
-
-
-
+ 
 
 
 
@@ -301,12 +280,7 @@ square.addEventListener('click', function () {
 
 
 
-
-
-
-
-
-
+ 
 
 let blueButtons = document.querySelectorAll('.btn')
 blueButtons.forEach(btn =>

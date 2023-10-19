@@ -1,8 +1,7 @@
 body {
-  background-color: rgb(247, 118, 118);
-  /* position: relative; */
-  /* padding: 0px; */
-  /* margin: 0px; */
+  /* background-color: rgb(247, 118, 118); */
+  background: linear-gradient(130deg,rgb(245, 243, 243), rgb(245, 243, 243), rgb(178, 176, 176));
+  /* background: rgb(245, 243, 243); */
 }
 
 .text{
@@ -13,7 +12,7 @@ body {
   background-clip:text;
   -webkit-background-clip: text;
   -webkit-text-stroke: 5px transparent;
-  color:rgb(247, 118, 118);
+  color:rgb(245, 243, 243);
   font-family: monospace;
   white-space: nowrap;
   display: flex;
@@ -21,6 +20,9 @@ body {
   /* animation: text-anim 1.5s steps(11) forwards; */
   animation: text-anim 5.5s ease-in-out forwards;
 }
+
+/* -webkit-background-clip: text;// Обрезаем фон по тексту */
+/* -webkit-text-fill-color: transparent;// Прозрачный текст */
 
 @keyframes text-anim {
   from{
@@ -33,12 +35,11 @@ body {
 
 
 #showText {
-  /* width: 420px; */
   width: 58ch;
   height: 20px;
-  background-clip:text;
+  /* background-clip:text; */
   -webkit-background-clip: text;
-  -webkit-text-stroke: transparent;
+  /* -webkit-text-stroke: transparent; */
   font-size: 1.3em;
   font-family: monospace;
   border-right: 3px solid red;
@@ -59,6 +60,68 @@ body {
     }
   }
   
+#btn3, #btn4 {
+  color: white;
+  border: 1px solid white !important;
+  border-radius:  5px;
+  padding: 5px;
+  margin: 5px;
+}
+#btn3 {
+  background: linear-gradient(45deg, #fd1a01, #db8310, rgb(75, 237, 75));
+}
+#btn4 {
+  background: red;
+  box-shadow: 0px 0px 30px red;
+}
+
+input[type='radio'] {
+  display:none;
+}
+
+label {
+  border: 2px solid red;
+  position: relative;
+  border-radius: 5px;
+  padding: 1px 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100px;
+  color: chartreuse;
+  cursor: pointer;
+  margin: 4px;
+  background-color: black;
+  
+}
+
+label::before {
+  /* position: absolute; */
+  content: '';
+  border: 3px solid white;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+input[type="radio"]:checked + label {
+  background-color: chartreuse;
+  color: black;
+  box-shadow: 0px 0px 20px rgb(43, 67, 19);
+}
+
+input[type="radio"]:checked + label:before {
+  /* height: ; */
+  background-color: chartreuse;
+  color: black;
+  border: 3px solid black;
+}
+
+
+
+
+
 
 #score {
   background:linear-gradient(90deg, red, blue)  ;
@@ -68,14 +131,6 @@ body {
   background: linear-gradient(180deg, white, blue) !important;
 }
 
- 
-
-
-
-
-
-
- 
 
 .btn {
   width: 100px;

@@ -98,7 +98,7 @@ label {
 label::before {
   /* position: absolute; */
   content: '';
-  border: 3px solid white;
+  border: 3px solid chartreuse;
   height: 6px;
   width: 6px;
   border-radius: 50%;

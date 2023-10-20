@@ -6,13 +6,74 @@ const months = ['января', 'февраля', 'марта', 'апреля']
 console.log(months[1]);
 
 
+let deg = 0
+const rotate = ()=>{
+  deg += 30
+//   if (deg == 360) deg = 0
+  return deg+'deg'
+}
+
+
+let col = document.querySelector ('#color') as HTMLButtonElement
+col.addEventListener ('click', function (){
+   col.style.rotate = rotate()
+   if (col.style.backgroundColor=='violet'){
+      return col.style.backgroundColor = 'red'
+   } else if (col.style.backgroundColor=='red') { 
+      return (col.style.backgroundColor = 'green')
+   } else {  
+      return (col.style.backgroundColor = 'violet')
+   }   
+}
+)
+
+
+
+//! анонимные и стрелочные функции
+
+let anonim = function() {
+   console.log('анонимная функция 1');
+};
+anonim()
+
+
+let anonim2 = function funс() {
+   console.log('именнованная функция 2');
+};
+anonim2()
+
+
+let anonim3 =()=> '=> стрелочная функция 3';
+console.log(anonim3());
+
+
+let anonim4 =()=> 25 +25;
+console.log(anonim4());
+
+
+let anonim5 =()=>{return 25 +25};
+console.log(anonim5());
+
+
+
+
+
+
+
+(function() {
+   console.log('анонимная функция');
+})();
 
 
  
 
+
+
+
+
+
+
 function fmFunc() {
-   
-   
    setTimeout(() => {
       fmConst.style.backgroundColor = 'red'
       fmConst.style.boxShadow = '10px 10px 3px red'

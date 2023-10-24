@@ -418,6 +418,7 @@ blueButtons.forEach(btn =>
    btn.addEventListener('click', function (e) {
       console.log(parseInt(e.target.dataset.num));
       console.log(e.button);
+      btn.style.width = btn.innerHTML*25 +'px'
 
    }))
 

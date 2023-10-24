@@ -6,17 +6,37 @@ const months = ['января', 'февраля', 'марта', 'апреля']
 console.log(months[1]);
 
 
-let deg = 0
-const rotate = ()=>{
-  deg += 30
-//   if (deg == 360) deg = 0
-  return deg+'deg'
+
+ 
+
+
+
+
+
+
+
+let position = 0
+const move = ()=> {
+   position +=10 
+   return position  +'px'
 }
 
+let degree = 0
+const deg =()=> {
+   degree+=30
+   return degree + 'deg'
+}
+// let bothFunction = function() {
+//    move()
+//    deg()
+//    // return move() && deg();
+// }
+ 
 
 let col = document.querySelector ('#color') as HTMLButtonElement
-col.addEventListener ('click', function (){
-   col.style.rotate = rotate()
+col.addEventListener ('mouseup', ()=>{
+   col.style.rotate = deg()
+   col.style.marginLeft = move()
    if (col.style.backgroundColor=='violet'){
       return col.style.backgroundColor = 'red'
    } else if (col.style.backgroundColor=='red') { 
@@ -31,38 +51,53 @@ col.addEventListener ('click', function (){
 
 //! анонимные и стрелочные функции
 
+//! обязательно пишем cons.log иначе функция в cons не выведется
+//! return ставится в литеральные скобки
 let anonim = function() {
-   console.log('анонимная функция 1');
+   setTimeout(() => {
+      console.log('анонимная функция 1');
+      
+   }, 3000);
 };
 anonim()
 
 
-let anonim2 = function funс() {
+let anonim2 =()=> {
    console.log('именнованная функция 2');
 };
-anonim2()
+anonim2();
 
 
-let anonim3 =()=> '=> стрелочная функция 3';
-console.log(anonim3());
+let anonim30 =()=>'=> стрелочная функция 30';
+console.log(anonim30());
+
+let anonim31 =()=> {return '=> стрелочная функция 31'};
+console.log(anonim31());
+
+let anonim32 =()=> console.log('=> стрелочная функция 32');
+anonim32();
 
 
 let anonim4 =()=> 25 +25;
 console.log(anonim4());
 
 
-let anonim5 =()=>{return 25 +25};
+let anonim5 =()=>{return (25 +25)};
 console.log(anonim5());
 
+// console.log(anonim5());
 
 
 
 
 
 
-(function() {
-   console.log('анонимная функция');
-})();
+
+setTimeout(() => {
+   
+;(function() {
+   console.log('анонимная функция 6');
+})()}, 2500);
 
 
  
@@ -162,6 +197,41 @@ score.addEventListener('click', fn, { once: true })
 // score.style.backgroundColor = 'green'
 
 
+
+
+
+// let bts = document.querySelectorAll('.bt')
+// bts.forEach(bt=>
+// bt.addEventListener ('click', ()=>{
+//    let num = bts.innerHTML
+//    bts.style.transition = 5 + 's'
+     
+//          if (bts.innerHTML == num)
+//          return bts.style.width= num +'px'
+// }))
+
+
+
+let bts = document.querySelector('.bt:nth-child(2)')as HTMLButtonElement
+// let bts3 = document.querySelector('.bt:nth-child(3)')as HTMLButtonElement
+bts.style.color = 'white'
+bts.style.width = bts.innerHTML +'px'
+bts.style.transition = 3 + 's'
+bts.style.backgroundColor= 'red'
+
+
+
+// let radio = document.querySelector('#radio1')as HTMLInputElement
+bts.addEventListener ('click', ()=>{
+   if (bts.style.backgroundColor== 'red') {
+      return bts.style.backgroundColor= 'blue',
+      bts.style.transition = 1 + 's'
+   } else {
+      return bts.style.backgroundColor= 'red',
+      bts.style.transition = 1 + 's'
+     }
+         // if (bts.innerHTML == num)
+})
 
 
 

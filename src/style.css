@@ -14,7 +14,7 @@ body {
   -webkit-text-stroke: 5px transparent;
   color:rgb(245, 243, 243);
   font-family: monospace;
-  white-space: nowrap;
+  /* white-space: nowrap; */
   display: flex;
   border-right: 4px solid red;
   /* animation: text-anim 1.5s steps(11) forwards; */
@@ -43,7 +43,7 @@ body {
   font-size: 1.3em;
   font-family: monospace;
   border-right: 3px solid red;
-  background-color: black;
+  background-color: red;
   color: transparent;
   white-space: nowrap;
   margin-bottom: 25px;
@@ -121,7 +121,14 @@ input[type="radio"]:checked + label:before {
 
 
 
-
+.bt:nth-child(3) {
+  color: white;
+  background:linear-gradient(90deg, red,blue );
+}
+.bt:nth-child(3):hover {
+  color: white;
+  background:linear-gradient(155deg, blue, red);
+}
 
 #score {
   background:linear-gradient(90deg, red, blue)  ;

@@ -71,6 +71,8 @@ anonim2();
 let anonim30 =()=>'=> стрелочная функция 30';
 console.log(anonim30());
 
+
+
 let anonim31 =()=> {return '=> стрелочная функция 31'};
 console.log(anonim31());
 

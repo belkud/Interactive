@@ -212,7 +212,7 @@ score.addEventListener('click', fn, { once: true })
 
 
 
-let bts = document.querySelector('.bt:nth-child(2)')as HTMLButtonElement
+let bts = document.querySelector('.bt:nth-child(1)')as HTMLButtonElement
 // let bts3 = document.querySelector('.bt:nth-child(3)')as HTMLButtonElement
 bts.style.color = 'white'
 bts.style.width = bts.innerHTML +'px'

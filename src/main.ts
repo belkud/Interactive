@@ -347,17 +347,49 @@ btn5.onclick = () => {
 
 
 
-let lis = document.querySelectorAll('li')
-lis.forEach(li =>
-   li.addEventListener('click', function () {
-      li.style.cursor = 'pointer'
-      li.style.backgroundColor = 'orange'
+// let lis = document.querySelectorAll('li')
+// lis.forEach(li =>
+//    li.addEventListener('click', function () {
+//       li.style.cursor = 'pointer'
+//       li.style.backgroundColor = 'orange'
 
 
 
 
-      // console.log('123');
-   }))
+//       // console.log('123');
+//    }))
+
+
+
+
+
+
+const digital = document.querySelectorAll('.digitals')
+digital.forEach(digital=>
+   digital.addEventListener ('click', (e)=>{
+   if (e.target.style.backgroundColor == 'lightgray')  {
+      e.target.style.backgroundColor = 'red'
+      e.target.style.color = 'lightgrey'
+      
+   } else{
+      e.target.style.backgroundColor = 'lightgray'
+      e.target.style.color = 'red'
+   }
+}));
+
+ 
+
+   // let blueButtons = document.querySelectorAll('.btn')
+   // blueButtons.forEach(btn =>
+   //    btn.addEventListener('click', function (e) {
+   //       console.log(parseInt(e.target.dataset.num));
+   //       console.log(e.button);
+   //       btn.style.width = btn.innerHTML*25 +'px'
+   
+   //    }))
+
+
+
 
 
 

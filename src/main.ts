@@ -53,13 +53,13 @@ col.addEventListener ('mouseup', ()=>{
 
 //! обязательно пишем cons.log иначе функция в cons не выведется
 //! return ставится в литеральные скобки
-let anonim = function() {
-   setTimeout(() => {
-      console.log('анонимная функция 1');
+// let anonim = function() {
+//    setTimeout(() => {
+//       console.log('анонимная функция 1');
       
-   }, 3000);
-};
-anonim()
+//    }, 1000);
+// };
+// anonim()
 
 
 let anonim2 =()=> {
@@ -95,11 +95,11 @@ console.log(anonim5());
 
 
 
-setTimeout(() => {
+// setTimeout(() => {
    
-;(function() {
-   console.log('анонимная функция 6');
-})()}, 2500);
+// ;(function() {
+//    console.log('анонимная функция 6');
+// })()}, 500);
 
 
  
@@ -346,21 +346,18 @@ btn5.onclick = () => {
 
 
 
-
-// let lis = document.querySelectorAll('li')
-// lis.forEach(li =>
-//    li.addEventListener('click', function () {
-//       li.style.cursor = 'pointer'
-//       li.style.backgroundColor = 'orange'
+ 
 
 
 
-
-//       // console.log('123');
-//    }))
-
-
-
+const score2 = document.querySelector('.score2') as HTMLUListElement
+score2.onmouseup = function (event) {
+   if (event.ctrlKey && event.shiftKey) {
+      console.log('Всем привет!');
+      ;
+   }
+};
+score2.style.border = '2px solid red'
 
 
 
@@ -513,14 +510,58 @@ document.addEventListener('click', function () {
 
 
 
+// найти сумму всех чисел до 10
+const dig = 10
+let summ = 0
+
+for (let i=1; i<=dig; i++){
+   if (summ=i){
+      console.log(summ);
+      
+   }
+}
+
+
+// if(odd%2==0){
+//    console.log('число четное');
+// } else {
+//    console.log('число нечетное');
+   
+// }
 
 
 
+// вывести доллары столько раз, сколько запросил пользователь
+let num = 10
+let mass = []
+for(let i=1; i<=num; i++) {
+   mass.push('$')
+}
+console.log(mass);
 
 
+// выввести делители числа
+let number = 10
+let massive = []
+for (let i = 1; i <= number; i++) {
+   if (number%i==0) {
+      massive.push(i)
+   }
+}
+console.log(massive);
 
 
+// выввести общие делители чисел
 
+let num1 = 40
+let num2 = 20
+let mass2 = []
 
-
+for (let i=1; i< num1 || i< num2; i++) { 
+       if (num1%i==0 && num2%i==0) {
+          mass2.push(i)
+         }   
+         
+      }
+      console.log(mass2);
 
